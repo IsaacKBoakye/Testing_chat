@@ -8,8 +8,8 @@ describe('Chat App Tests', () => {
   beforeEach((done) => {
     // Connect to the server using a dynamic port
     // socket = ioClient.connect('XXXXXXXXXXXXXXXXXXXXX');
-    // socket = ioClient.connect('http://localhost:3000');
-    var socket = io.connect();
+    socket = ioClient.connect('http://localhost:3000');
+    // var socket = io.connect();
 
       // Construct the GitHub Actions URL
     //   const githubServerUrl = process.env.GITHUB_SERVER_URL;
