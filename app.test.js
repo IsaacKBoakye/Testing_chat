@@ -8,14 +8,15 @@ describe('Chat App Tests', () => {
     // Connect to the server using a dynamic port
     // socket = ioClient.connect('XXXXXXXXXXXXXXXXXXXXX');
     // socket = ioClient.connect('http://localhost:3000');
+    var socket = io.connect();
 
       // Construct the GitHub Actions URL
-      const githubServerUrl = process.env.GITHUB_SERVER_URL;
-      const githubRunId = process.env.GITHUB_RUN_ID;
-      const githubUrl = `${githubServerUrl}/${githubRunId}`;
+    //   const githubServerUrl = process.env.GITHUB_SERVER_URL;
+    //   const githubRunId = process.env.GITHUB_RUN_ID;
+    //   const githubUrl = `${githubServerUrl}/${githubRunId}`;
    
-      // Connect to the server
-      socket = ioClient.connect(githubUrl);
+    //   // Connect to the server
+    //   socket = ioClient.connect(githubUrl);
 
     // Handle connection event
     socket.on('connect', () => {
