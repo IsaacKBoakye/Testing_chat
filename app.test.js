@@ -1,5 +1,4 @@
 const ioClient = require('socket.io-client');
-const io = require('socket.io-client');
 
 describe('Chat App Tests', () => {
   let socket;
@@ -7,17 +6,8 @@ describe('Chat App Tests', () => {
   // Setup a socket connection before each test
   beforeEach((done) => {
     // Connect to the server using a dynamic port
-    // socket = ioClient.connect('XXXXXXXXXXXXXXXXXXXXX');
-    // socket = ioClient.connect('http://localhost:3000');
-    var socket = io.connect();
-
-      // Construct the GitHub Actions URL
-    //   const githubServerUrl = process.env.GITHUB_SERVER_URL;
-    //   const githubRunId = process.env.GITHUB_RUN_ID;
-    //   const githubUrl = `${githubServerUrl}/${githubRunId}`;
-   
-    //   // Connect to the server
-    //   socket = ioClient.connect(githubUrl);
+    
+    socket = ioClient.connect('http://localhost:3000');
 
     // Handle connection event
     socket.on('connect', () => {
