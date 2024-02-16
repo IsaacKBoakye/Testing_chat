@@ -50,4 +50,4 @@ describe('Chat App Tests', () => {
     // Send a message
     socket.emit('message', messageToSend);
   });
-});
+ });
