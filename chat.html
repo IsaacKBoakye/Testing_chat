@@ -135,6 +135,8 @@ function onConnectButtonClick() {
 
     // Connect to the server
     socket = io.connect('http://localhost:3000');
+    const socket = io(ENDPOINT, { transports: ['websocket'] });
+
 
     // Send the welcome message out
     socket.on('welcome', function (message) {
