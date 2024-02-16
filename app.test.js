@@ -1,4 +1,5 @@
 const ioClient = require('socket.io-client');
+const io = require('socket.io-client');
 
 describe('Chat App Tests', () => {
   let socket;
